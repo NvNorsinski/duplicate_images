@@ -1,7 +1,11 @@
 # Duplicate Image finder
 
-This tools can find images which are identical even if the resolution is different. This is done by creating Hash values for each image using pHash.
-The the distance between the Hash values is calculated. Above an adjustable Threshold images are set as different.
-Start with
+This tool can find images which are identical or clode to beeing identical even if the resolution is different. This is done by creating a hash value for each image using pHash.
+The distance between the hash values is calculated. Under an adjustable threshold, images are set as identical.
+
+Start with:
 
 `python main.py "path/to/image/direcotry"`
+
+
+Similiar images are then printed out in groups. A groups are images identified as identical or nearly identical

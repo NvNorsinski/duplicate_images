@@ -34,7 +34,7 @@ def calc_hash(file) -> imagehash.ImageHash | None:
         return None
 
 
-def find_dupicate(images, threshold=5) -> list[Path]:
+def find_dupicate(images, threshold) -> list[Path]:
     """
     Comparisons of pHashes of pictures
 
@@ -92,6 +92,11 @@ def find_dupicate(images, threshold=5) -> list[Path]:
 
 
 def main():
+    # sets the threshold of the pHash difference. 
+    # 0 means no difference at all allowd, the higher the value the more 
+    # differences are allowd to see images as identical
+    THRESHOLD = 5
+
     # give directory as argument
     if len(sys.argv) < 2:
         print("Verwendung:")
@@ -123,7 +128,7 @@ def main():
         print("Keine Bilder gefunden.")
         return
 
-    groups = find_dupicate(images)
+    groups = find_dupicate(images, threshold=THRESHOLD)
 
     print()
     print("=" * 60)
