@@ -1,6 +1,6 @@
 # Duplicate Image finder
 
-This tool can find images which are identical or clode to beeing identical even if the resolution is different. This is done by creating a hash value for each image using pHash.
+This tool can find images which are identical or close to beeing identical, even if the resolution is different. This is done by creating a hash value for each image using pHash.
 The distance between the hash values is calculated. Under an adjustable threshold, images are set as identical.
 
 Start with:
